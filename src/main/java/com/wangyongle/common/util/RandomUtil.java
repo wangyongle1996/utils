@@ -1,4 +1,4 @@
-package com.wangyongle.util;
+package com.wangyongle.common.util;
 
 import java.util.HashSet;
 import java.util.Random;

@@ -2,7 +2,7 @@ package com.wangyongle.util;
 
 import org.junit.Test;
 
-import com.wangyongle.util.StringUtil;
+import com.wangyongle.common.util.StringUtil;
 
 public class StringUtilTest {
 	@Test
