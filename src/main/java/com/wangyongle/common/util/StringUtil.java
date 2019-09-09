@@ -57,7 +57,7 @@ public class StringUtil {
 		  if(!hasText(email))
 			  return false;
 		
-		String reg="[A-z]+[A-z0-9_-]*\\@[A-z0-9]+\\.[A-z]+";
+		String reg="[A-z0-9_-]*\\@[A-z0-9]+\\.[A-z]+";
 		return email.matches(reg);
 		
 	}
