@@ -4,6 +4,9 @@ import java.io.UnsupportedEncodingException;
 import java.util.Random;
 
 public class StringUtil {
+	
+
+	
 	/**
 	 * 
 	 * @Title: toHtml   
@@ -13,9 +16,10 @@ public class StringUtil {
 	 * @return: String
 	 */
 	public static String toHtml(String src) {
+		String str = src.replaceAll(System.getProperty("line.separator"), "|").replaceAll("\\r", "<br/>")	;
 		
-		String str = src.replaceAll(System.getProperty("line.separator"), "|")	;
 		String[] split = str.split("\\|");
+		
 		String newStr="";
 		for (String string2 : split) {
 			newStr+="<p>"+string2+"</p>";
@@ -57,7 +61,7 @@ public class StringUtil {
 		  if(!hasText(email))
 			  return false;
 		
-		String reg="[A-z0-9_-]*\\@[A-z0-9]+\\.[A-z]+";
+		String reg="[A-z]+[A-z0-9_-]*\\@[A-z0-9]+\\.[A-z]+";
 		return email.matches(reg);
 		
 	}
@@ -160,6 +164,4 @@ public class StringUtil {
 	    String lastname =randomChineseString(RandomUtil.random(1, 2));
 		return firstname +lastname;
 	}
-
-
 }
