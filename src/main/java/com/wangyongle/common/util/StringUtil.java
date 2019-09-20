@@ -1,6 +1,7 @@
 package com.wangyongle.common.util;
 
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class StringUtil {
@@ -26,6 +27,18 @@ public class StringUtil {
 		}
 		return newStr;
 		
+	}
+	public static ArrayList<String[]> toText(String src) {
+		String str = src.replaceAll(System.getProperty("line.separator"), "wyl.com").replaceAll("\\r", "<br/>")	;
+		String[] split = str.split("wyl.com");
+		
+		ArrayList<String[]> arrayList = new ArrayList<>();
+		for (String string : split) {
+			String[] split2 = string.split("\\|");
+			arrayList.add(split2);
+		}
+		
+		return arrayList;
 	}
 	
 	
