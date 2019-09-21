@@ -1,4 +1,4 @@
-package com.wangyongle.common.utils;
+package com.wangyongle.common.util;
 /**
  * 
  * @ClassName: CMSException 
