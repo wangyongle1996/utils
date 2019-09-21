@@ -1,4 +1,4 @@
-package com.wangyongle.common.util;
+package com.wangyongle.common.utils;
 
 import java.util.Calendar;
 import java.util.Date;

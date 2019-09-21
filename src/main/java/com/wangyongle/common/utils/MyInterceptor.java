@@ -1,4 +1,4 @@
-package com.wangyongle.common.util;
+package com.wangyongle.common.utils;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -8,11 +8,11 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 /**
  * 
  * @ClassName: AdminInterceptor 
- * @Description: 管理员中心 后台拦截器
+ * @Description: 个人中心 后台拦截器
  * @author: charles
  * @date: 2019年9月18日 下午3:55:35
  */
-public class AdminInterceptor extends HandlerInterceptorAdapter {
+public class MyInterceptor extends HandlerInterceptorAdapter {
 
 	
 	@Override
