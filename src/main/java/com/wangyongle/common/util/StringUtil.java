@@ -29,15 +29,15 @@ public class StringUtil {
 		
 	}
 	public static ArrayList<String[]> toText(String src) {
-		String str = src.replaceAll(System.getProperty("line.separator"), "wyl.com").replaceAll("\\r", "<br/>")	;
-		String[] split = str.split("wyl.com");
+		String str = src.replaceAll(System.getProperty("line.separator"), "wyl.com").replaceAll("\\n", "|");
+		String[] split = str.split("\\|");
 		
 		ArrayList<String[]> arrayList = new ArrayList<>();
-		for (String string : split) {
-			String[] split2 = string.split("\\|");
-			arrayList.add(split2);
-		}
-		
+		/*
+		 * for (String string : split) { String[] split2 = string.split("==");
+		 * arrayList.add(split2); }
+		 */
+		arrayList.add(split);
 		return arrayList;
 	}
 	
@@ -58,6 +58,16 @@ public class StringUtil {
 		 String telRegex = "[1][3578]\\d{9}";
 		 return  number.matches(telRegex);
 		 
+		
+	}
+	public static boolean isNumber(String number) {
+		//如果为空则返回false
+		if(!hasText(number))
+			return false;
+		//规则
+		String telRegex = "\\d*";
+		return  number.matches(telRegex);
+		
 		
 	}
 	

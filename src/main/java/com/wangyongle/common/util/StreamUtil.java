@@ -1,9 +1,11 @@
 package com.wangyongle.common.util;
 
+import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -63,4 +65,30 @@ public class StreamUtil {
 		
 		
 	}
+	public static String readTextFile2(File txtFile){
+		try {
+			return readTextFile2(new FileReader(txtFile));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		return null;
+		
+		
+	}
+	private static String readTextFile2(FileReader fileReader ) {
+		BufferedReader reader = new BufferedReader(fileReader);
+		String readLine = "";
+		String len = "";
+		try {
+			while ((len = reader.readLine())!=null) {
+				readLine += len+"\n";
+			}
+			reader.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return readLine;
+	}
+	
 }
